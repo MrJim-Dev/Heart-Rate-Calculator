@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "convert.h"
-#include "convert.c" // For Non-C Compilers
+//#include "convert.c" // For Non-C Compilers
 
 
 int main() {
