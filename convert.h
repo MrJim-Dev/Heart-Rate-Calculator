@@ -7,3 +7,4 @@ void findTHR(int rhr, int age);
 
 void findTHRZone(int rhr, int age);
 void findVO2max(float weight, int age, char gender, int time, int hr);
+void levelsOfHeartRate(int rhr, int age);

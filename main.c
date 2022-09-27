@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "convert.h"
-//#include "convert.c" // For Non-C Compilers
+#include "convert.c" // For Non-C Compilers
 
 
 int main() {
@@ -35,7 +35,6 @@ int main() {
             scanf("%d", &age);
             printf("Gender (M or F): ");
             scanf(" %c", &gender);
-
 
             findBodyFat(bmi, age, gender);
 
@@ -78,6 +77,15 @@ int main() {
             scanf("%d", &hr);
 
             findVO2max(weight, age, gender, time, hr);
+        
+            break;
+        case 7:
+            printf("Enter Resting Heart Rate (RHR): ");
+            scanf("%d", &rhr);
+            printf("Enter age: ");
+            scanf("%d", &age);
+
+            levelsOfHeartRate(rhr, age);
         
             break;
         default:

@@ -12,6 +12,7 @@ int commandList(void) {
     printf("\n| 4 - Find the Target Heart Rate (THR)               |");
     printf("\n| 5 - Find the Target Heart Rate Zone (THR Zone)     |");
     printf("\n| 6 - Find the Maximum Volume Consumption (VO2max)   |");
+    printf("\n| 7 - Display Levels of Heart Rate                   |");
     printf("\n|----------------------------------------------------|");
     printf("\n");
 
@@ -243,3 +244,25 @@ void findVO2max(float weight, int age, char gender, int time, int hr) {
         printf("%c", rating[i]);
     }
 }
+
+void levelsOfHeartRate(int rhr, int age) {
+    int mhr = findMHR(age);
+
+    int x = mhr - rhr; 
+
+    int ans, i = 50;
+
+    while (i <= 85) {
+        if (i == 50 ) {
+            printf("\nLEVEL 1 AND 2");
+        } else if (i == 65){
+            printf("\n\nLEVEL 3");
+        } else if (i == 75) {
+            printf("\n\nLEVEL 4 AND 5");
+        }
+        ans = (x *(i *.01)) + rhr;
+        printf("\n%d%% - %d bpm", i, ans);
+        i += 5;
+    }
+
+};
